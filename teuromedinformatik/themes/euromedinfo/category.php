@@ -18,7 +18,15 @@
                     <?php } ?>
                     <span class="in-progress"> > <?php echo $Name_category; ?></span>
                 </div>
-                <h1 class="page-title"><?php echo get_cat_name($parent_cat); ?></h1>
+                <h1 class="page-title">
+					<?php 
+					if($parent_cat != 0){	
+						echo get_cat_name($parent_cat);
+					}else{
+						echo $Name_category; 
+					}	
+					?>
+				</h1>
                 <div class="thumbnail-slider col-md-12 col-sm-12 pdlr-0">
                     <div class="well">
                         <div id="CarouselArticle" class="carousel slide">
@@ -28,9 +36,13 @@
                                 <li data-target="#myCarousel" data-slide-to="1">2</li>
                                 <li data-target="#myCarousel" data-slide-to="2">3</li>
                             </ol>-->
-                            <p class="carousel-article-title">
+							<?php
+								if($parent_cat != 0){
+							?>
+                            <h2 class="carousel-article-title">
                                 <?php echo $Name_category; ?>
-                            </p>
+                            </h2>
+							<?php } ?>
                             <!-- Carousel items -->
                             <div class="carousel-inner">
                                 <div class="item active">
