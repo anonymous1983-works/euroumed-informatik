@@ -1,7 +1,7 @@
 <div class="partenaires">
     <ul class="clearfix">
         <?php     
-	$requete=mysql_query("select * from euroinfo_ngg_pictures,euroinfo_ngg_gallery where euroinfo_ngg_pictures.galleryid = euroinfo_ngg_gallery.gid AND galleryid = '2'"); 
+		$requete=mysql_query("select * from euroinfo_ngg_pictures,euroinfo_ngg_gallery where euroinfo_ngg_pictures.galleryid = euroinfo_ngg_gallery.gid AND galleryid = '2'"); 
         while ($image = mysql_fetch_object($requete)){		
         ?>
         <li class="item-partenaire">
