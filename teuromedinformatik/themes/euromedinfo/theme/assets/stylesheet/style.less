@@ -782,15 +782,18 @@ body {
     .partenaires {
         background-color: #edf1f2;
         min-height: 240px;
+        width: 100%;
+        overflow: hidden;
         ul {
             list-style: none;
-            width: 1365px;
             margin: 0 auto;
+            width: 1278px;
             >li {
                 float: left;
                 margin-right: 85px;
-                &:last-child {
-                    margin-right: 85px;
+                &:last-child,
+                &.last {
+                    margin-right: 0;
                 }
                 >a {
                     display: block;

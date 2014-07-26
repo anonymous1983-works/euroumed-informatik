@@ -481,6 +481,16 @@ input:-ms-input-placeholder {
 #footer .widgets-footer .widgets-footer-widget-contact .right ul > li a.x {
   background-position: -120px -60px;
 }
+@media screen and (max-width: 1380px) {
+  #wrap .container-fluid .main-right .nav-right,
+  .no-home #wrap .container-fluid .main-right .nav-right {
+    top: -358px;
+    right: 0px;
+  }
+  .no-home #wrap .container-fluid .main-right .nav-right {
+    top: -301px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .container {
     width: 970px;
@@ -1200,18 +1210,21 @@ body .wrap-bg-top.affix {
 #wrap .partenaires {
   background-color: #edf1f2;
   min-height: 240px;
+  width: 100%;
+  overflow: hidden;
 }
 #wrap .partenaires ul {
   list-style: none;
-  width: 1365px;
   margin: 0 auto;
+  width: 1278px;
 }
 #wrap .partenaires ul > li {
   float: left;
   margin-right: 85px;
 }
-#wrap .partenaires ul > li:last-child {
-  margin-right: 85px;
+#wrap .partenaires ul > li:last-child,
+#wrap .partenaires ul > li.last {
+  margin-right: 0;
 }
 #wrap .partenaires ul > li > a {
   display: block;
