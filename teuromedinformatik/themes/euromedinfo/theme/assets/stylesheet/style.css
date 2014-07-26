@@ -736,6 +736,19 @@ body .wrap-bg-top.affix {
   height: 217px;
   text-decoration: none;
 }
+.page-article #wrap .thumbnail-slider .well .carousel .carousel-inner .item-article .div-img {
+  height: 217px;
+  width: 217px;
+  overflow: hidden;
+  float: left;
+  margin-right: 40px;
+}
+.page-article #wrap .thumbnail-slider .well .carousel .carousel-inner .item-article .div-img.no-img {
+  background: url(../images/logo.png) no-repeat 50% 50%;
+}
+.page-article #wrap .thumbnail-slider .well .carousel .carousel-inner .item-article .div-img .img-article {
+  margin-right: 0;
+}
 .page-article #wrap .thumbnail-slider .well .carousel .carousel-inner .item-article .img-article {
   float: left;
   margin-right: 40px;

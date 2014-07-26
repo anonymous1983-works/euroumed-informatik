@@ -45,9 +45,9 @@
                                                     $url = $thumb['0'];                                                    
                                                 ?>
                                                 <a class="item-article" href="<?php the_permalink(); ?>">
-													<div class="div-img img-article img-responsive">
-														<img class="img-article img-responsive" src="<?php echo $url; ?>" alt="Image">  
-													</div>		
+													<div class="div-img img-article img-responsive <?php if($url == '') echo ' no-img ' ?>">
+                                                        <?php if($url != '') { ?><img class="img-article img-responsive" src="<?php echo $url; ?>" alt="Image"><?php } ?>
+                                                    </div>
                                                     <div class="title-article">                                                    
                                                         <?php the_title(); ?>
                                                     </div>
