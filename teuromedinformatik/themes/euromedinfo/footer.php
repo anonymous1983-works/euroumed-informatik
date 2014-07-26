@@ -1,10 +1,14 @@
 <div class="partenaires">
     <ul class="clearfix">
         <?php     
-	$requete=mysql_query("select * from euroinfo_ngg_pictures,euroinfo_ngg_gallery where euroinfo_ngg_pictures.galleryid = euroinfo_ngg_gallery.gid AND galleryid = '2'"); 
-        while ($image = mysql_fetch_object($requete)){		
+        $requete=mysql_query("select * from euroinfo_ngg_pictures,euroinfo_ngg_gallery where euroinfo_ngg_pictures.galleryid = euroinfo_ngg_gallery.gid AND galleryid = '2'"); 
+        $nb_items_partenaires = mysql_num_rows($requete) - 1;
+        $i = 0;
+        while ($image = mysql_fetch_object($requete)){
+            $class_last = '';
+            if($i++ == $nb_items_partenaires) $class_last = 'last';
         ?>
-        <li class="item-partenaire">
+        <li class="item-partenaire <?php echo $class_last; ?>">
             <a class="<?php echo $image->image_slug;?>" style="background-image:url('<?php echo site_url($image->path."/".$image->filename);?>');" href="#" title="<?php echo $image->image_slug;?>"></a>
         </li>
         <?php } ?>        
