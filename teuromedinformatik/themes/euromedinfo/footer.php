@@ -2,12 +2,10 @@
     <ul class="clearfix">
         <?php     
 	$requete=mysql_query("select * from euroinfo_ngg_pictures,euroinfo_ngg_gallery where euroinfo_ngg_pictures.galleryid = euroinfo_ngg_gallery.gid AND galleryid = '2'"); 
-        while ($image = mysql_fetch_object($requete)){
-	
-		echo str_replace("\"", "/", $image->path);
+        while ($image = mysql_fetch_object($requete)){		
         ?>
         <li class="item-partenaire">
-            <a class="<?php echo $image->image_slug;?>" style="background-image:url('<?php echo site_url($image->filename);?>');" href="#" title="<?php echo $image->image_slug;?>"></a>
+            <a class="<?php echo $image->image_slug;?>" style="background-image:url('<?php echo site_url($image->path."/".$image->filename);?>');" href="#" title="<?php echo $image->image_slug;?>"></a>
         </li>
         <?php } ?>        
     </ul>
