@@ -690,7 +690,7 @@ body .wrap-bg-top.affix {
   margin-top: 30px;
 }
 .page-article #wrap .thumbnail-slider .well .carousel {
-  border-top: 1px solid #c7ccd0;
+  /*border-top: 1px solid #c7ccd0;*/
   padding-top: 30px;
 }
 .page-article #wrap .thumbnail-slider .well .carousel .carousel-indicators {
@@ -729,6 +729,9 @@ body .wrap-bg-top.affix {
   color: #eb4737;
   font-family: "Roboto";
   font-size: 24px;
+  display: block;
+  border-bottom: 1px solid #c7ccd0;
+  width: 100%;
 }
 .page-article #wrap .thumbnail-slider .well .carousel .carousel-inner .item-article {
   display: block;
