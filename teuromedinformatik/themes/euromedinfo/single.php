@@ -34,14 +34,16 @@ $parent_cat = $cat->category_parent;
                                     <div class="item active">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <a data-toggle="modal" href="#myModal" class="item-detail">                                               
-                                                    <?php
+												 <?php
                                                     $url = MultiPostThumbnails::get_post_thumbnail_url(
                                                                     get_post_type(), 'secondary-image'
                                                     );
-                                                    ?>
-                                                    <img alt="<?php the_title(); ?>" src="<?php echo $url; ?>" class="img-article img-responsive">
-                                                </a>
+												  if(!empty($url)){	
+                                                 ?>
+													<a data-toggle="modal" href="#myModal" class="item-detail"> 
+														<img alt="<?php the_title(); ?>" src="<?php echo $url; ?>" class="img-article img-responsive">
+													</a>
+												<?php } ?>
                                             </div>
                                         </div>
                                         <!--/row-->

@@ -33,13 +33,15 @@ while (have_posts()) : the_post(); ?>
                                     <div class="item active">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <a data-toggle="modal" href="#myModal" class="item-detail">                                               
-                                                    <?php
+												<?php
                                                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-                                                    $url = $thumb['0'];                                                    
-                                                    ?>
+                                                    $url = $thumb['0'];    
+													if(!empty($url)){	
+                                                 ?>
+                                                <a data-toggle="modal" href="#myModal" class="item-detail">
                                                     <img alt="<?php the_title(); ?>" src="<?php echo $url; ?>" class="img-article img-responsive">
                                                 </a>
+												<?php } ?>
                                             </div>
                                         </div>
                                         <!--/row-->
