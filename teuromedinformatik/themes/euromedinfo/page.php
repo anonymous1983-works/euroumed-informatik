@@ -18,14 +18,16 @@ while (have_posts()) : the_post(); ?>
                     <span class="in-progress"> > <?php the_title(); ?></span>
                 </div>
                <h1 class="page-title"> 
-                <?php if(get_the_ID() != 171){ echo company; } ?> 
+                <?php echo company; ?>
                </h1> 
                     <div class="thumbnail-slider col-md-12 col-sm-12 pdlr-0">
                         <div class="well">
                             <div class="carousel slide" id="CarouselArticle">
-                                <p class="carousel-article-title">
-                                    <?php the_title(); ?>
-                                </p>
+								<?php if(get_the_ID() != 171){ ?>
+									<p class="carousel-article-title">
+										<?php the_title(); ?>
+									</p>
+								<?php } ?>
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
                                     <div class="item active">
