@@ -1,0 +1,36 @@
+#header .nav__primary .sf-menu .menu-item .sub-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  min-width: 230px;
+  position: absolute;
+  top: 157px;
+  left: 0;
+  opacity: .85;
+  background-color: #2b97dd;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.affix#header .nav__primary .sf-menu .menu-item .sub-menu {
+  top: 50px;
+}
+#header .nav__primary .sf-menu .menu-item .sub-menu > li {
+  min-height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #62a7d7;
+  margin: 0 15px;
+  text-align: left;
+}
+#header .nav__primary .sf-menu .menu-item .sub-menu > li:last-child {
+  border-bottom: none;
+}
+#header .nav__primary .sf-menu .menu-item .sub-menu > li a {
+  color: #d9dde6;
+  font-size: 14px;
+  padding-top: 0;
+}
+#header .nav__primary .sf-menu .menu-item:hover .sub-menu {
+  display: block;
+}
