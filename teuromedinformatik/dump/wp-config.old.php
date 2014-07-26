@@ -19,7 +19,7 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'euroumed-informatik');
+define('DB_NAME', 'euroumed');
 
 /** Utilisateur de la base de données MySQL. */
 define('DB_USER', 'root');
@@ -49,14 +49,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'R;-@raLs5|6B=_`?5KS(2|,CN%oqj|*B>3WU}&A%*G&eeIKo4N3[>jkdQ6YMnRWv');
-define('SECURE_AUTH_KEY',  'n6n+pHWK_pWf?2jqXP5=GoXjeySYcU^Fi2X;Um4-o{>N:/r%Ut8W[VOKwCG.u3U9');
-define('LOGGED_IN_KEY',    'JR~e:xysD?CW3SDm>X!5+F:$wfm?3f&57;caYkrX_0%c{Py-16H^G]%v!y.7 .RH');
-define('NONCE_KEY',        'A{.$w6GJtTqcx70),o`9{5=c&4=v;=fQxyOzdV4y+!W8FDXU^<y?>6xU*#@k|`!V');
-define('AUTH_SALT',        'nRH5.u:w=Y`LZvLjy(j+Er-1MECSYdewtx;gbD),5;:C}7k~db$-C- lU2F3vJE1');
-define('SECURE_AUTH_SALT', 'Fd`$yHd!$~yP*UV0E_.%JB+*f6J0?!pYm)to;Qh#o5D{Vb-[4_fAZ(N/Dru|IweA');
-define('LOGGED_IN_SALT',   'g[g|h~Q?6j#!AJ/vr0)JyuSWK;8#>hN;$8(^R4S)aoh%g?z(=$[l$xy5.v,-@y{N');
-define('NONCE_SALT',       '/~/=&2c0O:6 @*nkYiR|sP!$|8fvY+SS4{K[?~T0C)c*Fj]%3GTi5/S4Z<J;|m-=');
+define('AUTH_KEY',         'T-J+n^?Rr^zp<1U*(Jn^yq;%og1&Zodkiq8k#-wcC62G+{({(C%-6V#!6Y]FLhXw');
+define('SECURE_AUTH_KEY',  'L]z1p1kRNp>wv^P@xH%}*mukh-R#W5 ;A<!o_/H-jM+?~^:8eo+1JffC-g >JW3`');
+define('LOGGED_IN_KEY',    '%-h{]~GQ@|h_n/E-!nB(AIG|^e>vqhXTAU,okeh+g8).kH(<D0pncf@`p{O-$QDb');
+define('NONCE_KEY',        ' ]{^Z=}V;qPALR3S]#T^-|.&i)@d}V]STT2v>gOr70OIY9u){nHsx7`y9Mj_-qwK');
+define('AUTH_SALT',        '>PRC.Vqr?Ijk^(O]U!k?P{V6Q>RoQ=@+1Wh@SL<LuZRU<O5.jmv^u9tPlY*=WD>0');
+define('SECURE_AUTH_SALT', 'sKEx{@[;sd/L[:dAz-+%r daPF0),R@!_X?:k8DWt3tt|(lqhfF|10_s@$yceCR6');
+define('LOGGED_IN_SALT',   '<1TZ4OJ#2b>.EDngle1uO`5oYT*/UD@)1p32XqnWV-utbkUR!`})zu|DqOD,[-_7');
+define('NONCE_SALT',       '-|z_?^WG_b>v;A~x0aoc|$Z*73mh)fuR1+%bI^|caIz>Hi[=aZe{-,7s~/DaWUqN');
 /**#@-*/
 
 /**
@@ -66,7 +66,7 @@ define('NONCE_SALT',       '/~/=&2c0O:6 @*nkYiR|sP!$|8fvY+SS4{K[?~T0C)c*Fj]%3GTi
  * si vous leur donnez chacune un préfixe unique. 
  * N'utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés!
  */
-$table_prefix  = 'euro_';
+$table_prefix  = 'euroInfo_';
 
 /**
  * Langue de localisation de WordPress, par défaut en Anglais.
@@ -95,5 +95,12 @@ define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
+define ('WP_CONTENT_FOLDERNAME', 'teuromedinformatik'); 
+define ('WP_CONTENT_DIR', ABSPATH . WP_CONTENT_FOLDERNAME) ;
+
+define('WP_CONTENT_URL', 'http://local.euroumed-informatik.com/teuromedinformatik');
+
+define( 'WP_AUTO_UPDATE_CORE', false );
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once(ABSPATH . 'wp-settings.php');
